@@ -1,0 +1,23 @@
+# Copy this file into detections/<tactic>/ and fill every field.
+id: ""                     # a new GUID
+name: ""
+description: |
+  What behaviour this detects and why it matters.
+severity: Medium           # Informational | Low | Medium | High
+requiredDataConnectors:
+  - connectorId: ""        # e.g. AzureActiveDirectory
+    dataTypes: [""]        # e.g. SigninLogs
+queryFrequency: 1h
+queryPeriod: 1h
+triggerOperator: gt
+triggerThreshold: 0
+tactics: []                # e.g. [CredentialAccess]
+relevantTechniques: []     # e.g. [T1110.003]
+query: |
+  // KQL goes here
+entityMappings: []
+falsePositives: |
+  Known benign causes and how to tune them.
+testing: |
+  How to generate events that should fire this rule, and events that should not.
+references: []
